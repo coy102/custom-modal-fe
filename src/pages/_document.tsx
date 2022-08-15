@@ -6,6 +6,10 @@ export default class AppDocument extends Document {
       <Html lang="en">
         <Head>
           <title> Custom Modal </title>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          />
         </Head>
         <body>
           <Main />

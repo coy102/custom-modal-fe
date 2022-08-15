@@ -1,20 +1,18 @@
 import { memo } from 'react'
 
-import Modal from '~/components/Modal'
-
+import DefaultModal from './DefaultModal'
 import useHooks from './hooks'
 
 const Home = () => {
-  const { open, handleToggleModal } = useHooks()
+  const { modal, handleToggleModal } = useHooks()
   return (
     <div>
       Home
-      <button type="button" onClick={handleToggleModal}>
-        open modal
-      </button>
-      <Modal open={open}>
-        <h1>Modal</h1>
-      </Modal>
+      <DefaultModal
+        onClickOpen={handleToggleModal('default-modal')}
+        onClose={handleToggleModal('')}
+        open={modal === 'default-modal'}
+      />
     </div>
   )
 }

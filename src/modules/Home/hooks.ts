@@ -1,14 +1,19 @@
 import { useCallback, useState } from 'react'
 
-const useHooks = () => {
-  const [open, setOpen] = useState(false)
+type ModalType = 'default-modal' | 'scrollable-modal' | ''
 
-  const handleToggleModal = useCallback(() => {
-    setOpen((prev) => !prev)
-  }, [])
+const useHooks = () => {
+  const [modal, setModal] = useState<ModalType>('default-modal')
+
+  const handleToggleModal = useCallback(
+    (modalType: ModalType) => () => {
+      setModal(modalType)
+    },
+    []
+  )
 
   return {
-    open,
+    modal,
     handleToggleModal,
   }
 }

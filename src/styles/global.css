@@ -1,6 +1,9 @@
 :root {
+  --root-border-color: #f4f4f4;
+  --root-boder-divider: var(--modal-footer-border-width) solid
+    var(--root-border-color);
   --modal-bg: #fff;
-  --modal-border-radius: 0.5rem;
+  --modal-border-radius: 8px;
   --modal-border-width: 1px;
   --modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --modal-footer-border-width: 1px;
@@ -14,6 +17,7 @@
   --modal-title-line-height: 1.5;
   --modal-width: 500px;
   --modal-zindex: 1055;
+  --modal-footer-border-width: 1px;
 }
 
 .modal-show {
@@ -39,4 +43,51 @@
   margin-right: auto;
   position: relative;
   width: var(--modal-width);
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--modal-header-padding);
+  border-bottom: var(--root-boder-divider);
+  border-top-left-radius: var(--modal-inner-border-radius);
+  border-top-right-radius: var(--modal-inner-border-radius);
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: var(--modal-padding);
+}
+
+.modal-footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: calc(var(--modal-padding) - var(--modal-footer-gap) * 0.5);
+  border-top: var(--root-boder-divider);
+  border-bottom-right-radius: var(--modal-inner-border-radius);
+  border-bottom-left-radius: var(--modal-inner-border-radius);
+}
+
+.modal-footer > * {
+  margin: calc(var(--modal-footer-gap) * 0.5);
+}
+
+.btn {
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  margin: 0.5em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+}
+
+.btn-contained {
+  background: palevioletred;
+  color: white;
 }
