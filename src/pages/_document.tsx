@@ -1,10 +1,6 @@
 import Document, { Html, Main, NextScript } from 'next/document'
 
-interface Props {
-  emotionStyleTags: any
-}
-
-export default class AppDocument extends Document<Props> {
+export default class AppDocument extends Document {
   render() {
     return (
       <Html lang="en">

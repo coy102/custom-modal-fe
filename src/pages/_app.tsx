@@ -1,11 +1,9 @@
 import { AppProps } from 'next/app'
 
-import CustomHead from '~/components/CustomHead'
+import '~/styles/global.css'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
-    <CustomHead />
-
     {/* eslint-disable-next-line react/jsx-props-no-spreading */}
     <Component {...pageProps} />
   </>
