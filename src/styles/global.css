@@ -3,14 +3,12 @@
   --modal-border-radius: 0.5rem;
   --modal-border-width: 1px;
   --modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --modal-color: ;
   --modal-footer-border-width: 1px;
   --modal-footer-gap: 0.5rem;
   --modal-header-border-width: 1px;
   --modal-header-padding-x: 1rem;
   --modal-header-padding-y: 1rem;
   --modal-header-padding: 1rem 1rem;
-  --modal-inner-border-radius: calc(0.5rem - 1px);
   --modal-margin: 0.5rem;
   --modal-padding: 1rem;
   --modal-title-line-height: 1.5;
@@ -18,15 +16,27 @@
   --modal-zindex: 1055;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--bs-modal-zindex);
-  display: none;
-  width: 100%;
+.modal-show {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: flex;
   height: 100%;
+  left: 0;
+  outline: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  outline: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: var(--modal-zindex);
+}
+
+.modal-dialog {
+  background-color: var(--modal-bg);
+  border-radius: var(--modal-border-radius);
+  box-shadow: var(--modal-box-shadow);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: var(--modal-width);
 }
