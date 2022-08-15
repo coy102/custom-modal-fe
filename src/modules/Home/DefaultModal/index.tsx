@@ -13,7 +13,7 @@ const DefaultModal = ({ open, onClickOpen, onClose }: Props) => (
     <button type="button" className="btn btn-contained" onClick={onClickOpen}>
       Open Default Modal
     </button>
-    <Modal open={open}>
+    <Modal open={open} onClose={onClose}>
       <ModalHeader onClose={onClose}>Header</ModalHeader>
       <ModalBody>Body</ModalBody>
       <ModalFooter>

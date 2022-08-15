@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react'
 type ModalType = 'default-modal' | 'scrollable-modal' | ''
 
 const useHooks = () => {
-  const [modal, setModal] = useState<ModalType>('default-modal')
+  const [modal, setModal] = useState<ModalType>('')
 
   const handleToggleModal = useCallback(
     (modalType: ModalType) => () => {
