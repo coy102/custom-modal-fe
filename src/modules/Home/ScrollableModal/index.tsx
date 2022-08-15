@@ -11,12 +11,12 @@ interface Props {
 const DefaultModal = ({ open, onClickOpen, onClose }: Props) => (
   <div>
     <button type="button" className="btn btn-contained" onClick={onClickOpen}>
-      Open Default Modal
+      Open Scrollable Modal
     </button>
     <Modal open={open} onClose={onClose}>
       <ModalHeader onClose={onClose}>Header</ModalHeader>
-      <ModalBody>
-        {[...new Array(1)]
+      <ModalBody scrollable>
+        {[...new Array(50)]
           .map(
             () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.

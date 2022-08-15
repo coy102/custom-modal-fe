@@ -1,23 +1,17 @@
 :root {
-  --root-border-color: #f4f4f4;
-  --root-boder-divider: var(--modal-footer-border-width) solid
-    var(--root-border-color);
   --modal-bg: #fff;
   --modal-border-radius: 8px;
   --modal-border-width: 1px;
   --modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --modal-footer-border-width: 1px;
-  --modal-footer-gap: 0.5rem;
-  --modal-header-border-width: 1px;
-  --modal-header-padding-x: 1rem;
-  --modal-header-padding-y: 1rem;
   --modal-header-padding: 1rem 1rem;
-  --modal-margin: 0.5rem;
   --modal-padding: 1rem;
-  --modal-title-line-height: 1.5;
   --modal-width: 500px;
   --modal-zindex: 1055;
-  --modal-footer-border-width: 1px;
+  --root-border-color: #f4f4f4;
+  --modal-footer-gap: 0.5rem;
+  --root-boder-divider: var(--modal-footer-border-width) solid
+    var(--root-border-color);
 }
 
 .modal-show {
@@ -33,6 +27,7 @@
   top: 0;
   width: 100%;
   z-index: var(--modal-zindex);
+  transform: none;
 }
 
 .modal-dialog {
@@ -41,7 +36,6 @@
   box-shadow: var(--modal-box-shadow);
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   width: var(--modal-width);
 }
 
@@ -62,15 +56,21 @@
   padding: var(--modal-padding);
 }
 
+.modal-dialog-scrollable {
+  padding: var(--modal-padding);
+  overflow-y: auto;
+  max-height: 300px;
+}
+
 .modal-footer {
+  border-bottom-left-radius: var(--modal-inner-border-radius);
+  border-bottom-right-radius: var(--modal-inner-border-radius);
+  border-top: var(--root-boder-divider);
   display: flex;
   flex-shrink: 0;
   flex-wrap: wrap;
   justify-content: flex-end;
   padding: calc(var(--modal-padding) - var(--modal-footer-gap) * 0.5);
-  border-top: var(--root-boder-divider);
-  border-bottom-right-radius: var(--modal-inner-border-radius);
-  border-bottom-left-radius: var(--modal-inner-border-radius);
 }
 
 .modal-footer > * {
@@ -82,9 +82,9 @@
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: palevioletred;
+  cursor: pointer;
   margin: 0.5em;
   padding: 0.25em 1em;
-  cursor: pointer;
 }
 
 .btn-contained {
