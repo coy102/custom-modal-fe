@@ -13,8 +13,7 @@
     "lint:fix": "yarn lint --fix && yarn format",
     "test": "cross-env NODE_ENV=test jest --config scripts/jest.config.js --runInBand",
     "test:coverage": "cross-env NODE_ENV=test jest --config scripts/jest.config.js --collectCoverage --runInBand",
-    "tsc": "tsc --pretty --noEmit",
-    "storybook": "start-storybook -p 6006"
+    "tsc": "tsc --pretty --noEmit"
   },
   "husky": {
     "hooks": {
@@ -39,15 +38,6 @@
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@emotion/babel-plugin": "11.0.0",
-    "@storybook/addon-actions": "^5.3.12",
-    "@storybook/addon-backgrounds": "^5.3.12",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-knobs": "^5.3.12",
-    "@storybook/addon-links": "^5.3.12",
-    "@storybook/addon-options": "^5.3.21",
-    "@storybook/addon-storysource": "^5.3.12",
-    "@storybook/addons": "^5.3.12",
-    "@storybook/react": "^5.3.12",
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.1",
     "@types/jest": "^26.0.22",
