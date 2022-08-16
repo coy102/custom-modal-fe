@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Home from '~/modules/Home'
 
 const Index = () => (

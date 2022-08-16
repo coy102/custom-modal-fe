@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import React, { memo } from 'react'
 
 import { Modal, ModalBody, ModalFooter, ModalHeader } from '~/components/Modal'
 
@@ -10,10 +10,15 @@ interface Props {
 
 const DefaultModal = ({ open, onClickOpen, onClose }: Props) => (
   <div>
-    <button type="button" className="btn btn-contained" onClick={onClickOpen}>
+    <button
+      data-testid="btn-scrollable-modal"
+      type="button"
+      className="btn btn-contained"
+      onClick={onClickOpen}
+    >
       Open Scrollable Modal
     </button>
-    <Modal open={open} onClose={onClose}>
+    <Modal data-testid="modal-scrollable" open={open} onClose={onClose}>
       <ModalHeader onClose={onClose}>Header</ModalHeader>
       <ModalBody scrollable>
         {[...new Array(50)]

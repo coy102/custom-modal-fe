@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import React, { memo } from 'react'
 
 interface Props {
   'data-testid'?: string
@@ -15,7 +15,12 @@ const ModalHeader = ({
     {children}
     {onClose && (
       <div>
-        <button type="button" className="btn" onClick={onClose}>
+        <button
+          data-testid="btn-modal-close"
+          type="button"
+          className="btn"
+          onClick={onClose}
+        >
           <i className="fa-solid fa-xmark" />
         </button>
       </div>
