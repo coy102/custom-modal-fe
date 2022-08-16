@@ -31,10 +31,10 @@ import { Modal, ModalBody, ModalFooter, ModalHeader } from '~/components/Modal'
   <ModalHeader onClose={onClose}>
     <b> Modal Title </b>
   </ModalHeader>
-  <ModalBody data-testid="modal-default-body">
+  <ModalBody>
     <p>Modal Body</p>
   </ModalBody>
-  <ModalFooter data-testid="modal-default-footer">
+  <ModalFooter>
     <div>Modal Footer</div>
   </ModalFooter>
 </Modal>
