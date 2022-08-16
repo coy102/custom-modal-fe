@@ -19,8 +19,11 @@ const DefaultModal = ({ open, onClickOpen, onClose }: Props) => (
       Open Scrollable Modal
     </button>
     <Modal data-testid="modal-scrollable" open={open} onClose={onClose}>
-      <ModalHeader onClose={onClose}>Header</ModalHeader>
+      <ModalHeader onClose={onClose}>
+        <b>Scrollable Modal</b>
+      </ModalHeader>
       <ModalBody scrollable>
+        <p>Very long content</p>
         {[...new Array(50)]
           .map(
             () => `Cras mattis consectetur purus sit amet fermentum.

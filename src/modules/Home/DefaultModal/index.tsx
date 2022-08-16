@@ -20,10 +20,10 @@ const DefaultModal = ({ open, onClickOpen, onClose }: Props) => (
     </button>
     <Modal open={open} onClose={onClose} data-testid="modal-default">
       <ModalHeader onClose={onClose}>
-        <h4> Default Modal </h4>
+        <b> Default Modal </b>
       </ModalHeader>
       <ModalBody data-testid="modal-default-body">
-        <h4>Content</h4>
+        <p>Content</p>
         {[...new Array(1)]
           .map(
             () => `Cras mattis consectetur purus sit amet fermentum.
