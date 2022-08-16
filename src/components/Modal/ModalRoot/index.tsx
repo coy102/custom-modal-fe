@@ -4,6 +4,7 @@ import useHooks from './hooks'
 
 interface Props {
   children: React.ReactNode
+  'data-testid'?: string
   disableEsc?: boolean
   disableOutsideClick?: boolean
   onClose: () => void // close modal for onEscape or onCLickOutside
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const Modal = ({
+  'data-testid': dataTestid,
   children,
   disableEsc = false,
   disableOutsideClick = false,
@@ -22,7 +24,7 @@ const Modal = ({
   if (!open) return null
 
   return (
-    <div className="modal-show">
+    <div className="modal-show" data-testid={dataTestid}>
       <div className="modal-dialog" ref={ref}>
         {children}
       </div>

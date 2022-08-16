@@ -20,7 +20,6 @@ module.exports = {
   },
   moduleDirectories: ['node_modules', '<rootDir>/src'],
   moduleNameMapper: {
-    '~/mocks/(.*)$': '<rootDir>/mocks/$1',
     '~/public/(.*)$': '<rootDir>/public/$1',
     '~/tests/(.*)$': '<rootDir>/tests/$1',
     '~(.*)$': '<rootDir>/src/$1',
@@ -28,7 +27,6 @@ module.exports = {
       '<rootDir>/scripts/mocks/image.js',
   },
   coverageReporters: ['html', 'lcov', 'cobertura'],
-  setupFiles: ['<rootDir>/tests/mocks.ts'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|js?|tsx?|ts?)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],

@@ -1,12 +1,17 @@
 import { memo } from 'react'
 
 interface Props {
+  'data-testid'?: string
   children: React.ReactNode
   onClose?: () => void
 }
 
-const ModalHeader = ({ children, onClose = undefined }: Props) => (
-  <div className="modal-header">
+const ModalHeader = ({
+  children,
+  'data-testid': dataTestid,
+  onClose = undefined,
+}: Props) => (
+  <div className="modal-header" data-testid={dataTestid}>
     {children}
     {onClose && (
       <div>
